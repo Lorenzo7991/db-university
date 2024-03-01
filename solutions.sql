@@ -43,3 +43,15 @@ FROM departments;
 
 /*  Quanti sono gli insegnanti che non hanno un numero di telefono? (50) */
 SELECT COUNT(*) AS num_teachers_without_phone FROM teachers WHERE phone IS NULL OR phone = '';
+
+/* EX - Query con GROUP BY */
+
+/* Contare quanti iscritti ci sono stati ogni anno */
+SELECT YEAR(enrolment_date) AS year, COUNT(*) AS num_students FROM students GROUP BY YEAR(enrolment_date);
+/* Risultato:
+year	num_students	
+2018    912
+2019    1709
+2020    1645
+2021    734
+ */
