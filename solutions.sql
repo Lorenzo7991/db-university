@@ -31,3 +31,6 @@ date - 2020-06-20
 hour - 09:40:00
 location - Appartamento 98
 address - Rotonda Leone 5 Appartamento 88*/
+
+/*  Selezionare tutti i corsi di laurea magistrale (38) */
+SELECT * FROM degrees WHERE level = 'magistrale';
