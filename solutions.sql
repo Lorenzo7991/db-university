@@ -55,3 +55,29 @@ year	num_students
 2020    1645
 2021    734
  */
+
+ /* Contare gli insegnanti che hanno l'ufficio nello stesso edificio */
+ SELECT office_number, COUNT(*) AS num_teachers FROM teachers GROUP BY office_number HAVING COUNT(*) > 1;
+ /* Risultato:
+ office_number	
+num_teachers	
+1       x2
+106     x3
+11      x2
+124     x4
+161     x2
+164     x2
+17      x2
+184     x2
+185     x2
+2       x2
+28      x2
+33      x3
+34      x2
+43      x3
+60      x2
+72      x2
+83      x2
+88      x2
+97      x4
+ */
