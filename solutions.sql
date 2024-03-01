@@ -34,3 +34,7 @@ address - Rotonda Leone 5 Appartamento 88*/
 
 /*  Selezionare tutti i corsi di laurea magistrale (38) */
 SELECT * FROM degrees WHERE level = 'magistrale';
+
+/* Da quanti dipartimenti è composta l'università? (12) */
+SELECT COUNT(*) AS num_departments
+FROM departments;
