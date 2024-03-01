@@ -81,3 +81,6 @@ num_teachers
 88      x2
 97      x4
  */
+ 
+/* Calcolare la media dei voti di ogni appello d'esame */
+ SELECT exam_id, AVG(vote) AS average_grade FROM exam_student GROUP BY exam_id;
