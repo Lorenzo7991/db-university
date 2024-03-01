@@ -1,3 +1,5 @@
+/* EX - Query con SELECT */
+
 /* Selezionare tutti gli studenti nati nel 1990 (160) */
 SELECT * FROM students WHERE YEAR(date_of_birth) = 1990;
 
@@ -38,3 +40,6 @@ SELECT * FROM degrees WHERE level = 'magistrale';
 /* Da quanti dipartimenti è composta l'università? (12) */
 SELECT COUNT(*) AS num_departments
 FROM departments;
+
+/*  Quanti sono gli insegnanti che non hanno un numero di telefono? (50) */
+SELECT COUNT(*) AS num_teachers_without_phone FROM teachers WHERE phone IS NULL OR phone = '';
