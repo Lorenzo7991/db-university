@@ -91,3 +91,6 @@ num_teachers
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* 04/03/2024 */
+
+/* Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia */
+SELECT S.*, D.department_id, D.name AS degree_name FROM students AS S JOIN degrees AS D ON S.degree_id = D.department_id WHERE D.name = 'Corso di Laurea in Economia';
