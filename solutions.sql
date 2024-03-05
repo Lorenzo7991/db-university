@@ -94,3 +94,6 @@ num_teachers
 
 /* Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia */
 SELECT S.*, D.department_id, D.name AS degree_name FROM students AS S JOIN degrees AS D ON S.degree_id = D.department_id WHERE D.name = 'Corso di Laurea in Economia';
+
+/* Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze */
+SELECT * FROM 'Degrees' AS DEG JOIN 'Department' AS DEP ON DEG.'department_id' = DEP.'id' WHERE DEP.'name' = 'Dipartimenti di Neuroscienze'
