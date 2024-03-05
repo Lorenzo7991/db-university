@@ -96,4 +96,7 @@ num_teachers
 SELECT S.*, D.department_id, D.name AS degree_name FROM students AS S JOIN degrees AS D ON S.degree_id = D.department_id WHERE D.name = 'Corso di Laurea in Economia';
 
 /* Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze */
-SELECT * FROM 'Degrees' AS DEG JOIN 'Department' AS DEP ON DEG.'department_id' = DEP.'id' WHERE DEP.'name' = 'Dipartimenti di Neuroscienze'
+SELECT * FROM 'degrees' AS DEG JOIN 'department' AS DEP ON DEG.'department_id' = DEP.'id' WHERE DEP.'name' = 'Dipartimento di Neuroscienze';
+
+/* Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44) */
+SELECT C.* FROM 'courses' AS C JOIN 'course_teacher' AS CT ON C.'id' = CT.'courses_id' JOIN 'teachers' AS T ON T.'id' = CT.'teacher_id' WHERE T.'surname' = Amato AND T.'name' = Fulvio;  
